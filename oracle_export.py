@@ -17,7 +17,7 @@ def export_oracle():
   server="localhost"
   sid="xe"                                                         
   #con = cx_Oracle.connect('python1/12345678@localhost/xe')                                   
-  con = cx_Oracle.connect('%login/%password@%server/%sid' % login,password,server,sid)                                   
+  con = cx_Oracle.connect('%s/%s@%s/%s' % (login,password,server,sid))                                   
   cur = con.cursor()                                                                         
   cur1 = con.cursor()                                                                        
   objectTypeChars=['PACKAGE','VIEW','PROCEDURE','FUNCTION','TYPE','JOB','TABLE']             
